@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Shield, Home, Lock, Zap, Smartphone, Settings, Menu, X, Github, Star } from 'lucide-react';
+import { Shield, Home, Lock, Zap, Smartphone, BarChart3, AlertTriangle, GraduationCap, Trophy, TrendingUp, Menu, X, Github, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -13,9 +13,13 @@ export const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
 
   const navigationItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Home, badge: null },
-    { id: 'vault', label: 'Vault', icon: Lock, badge: '6' },
-    { id: 'generator', label: 'Generator', icon: Zap, badge: null },
-    { id: 'totp', label: 'Authenticator', icon: Smartphone, badge: '3' },
+    { id: 'vault', label: 'Password Vault', icon: Lock, badge: '6' },
+    { id: 'generator', label: 'Password Generator', icon: Zap, badge: null },
+    { id: 'analysis', label: 'Security Analysis', icon: BarChart3, badge: 'New' },
+    { id: 'breach', label: 'Breach Check', icon: AlertTriangle, badge: '1' },
+    { id: 'coach', label: 'Security Coach', icon: GraduationCap, badge: null },
+    { id: 'achievements', label: 'Achievements', icon: Trophy, badge: '4' },
+    { id: 'stats', label: 'Activity Stats', icon: TrendingUp, badge: null },
   ];
 
   const NavItem = ({ item, isMobile = false }) => (
@@ -54,10 +58,10 @@ export const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
               <div className="absolute inset-0 h-8 w-8 text-primary animate-pulse opacity-50"></div>
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-cyber bg-clip-text text-transparent">
-                FORTIPASS
+              <h1 className="text-lg font-bold bg-gradient-cyber bg-clip-text text-transparent leading-tight">
+                FORTIPass
               </h1>
-              <p className="text-xs text-muted-foreground">Student Security Hub</p>
+              <p className="text-xs text-muted-foreground">FOSS Security Hub</p>
             </div>
           </div>
 
@@ -90,7 +94,7 @@ export const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
           <div className="flex items-center gap-3">
             <Shield className="h-6 w-6 text-primary" />
             <h1 className="text-lg font-bold bg-gradient-cyber bg-clip-text text-transparent">
-              FORTIPASS
+              FORTIPass
             </h1>
           </div>
           <Button

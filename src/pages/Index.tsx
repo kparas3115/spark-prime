@@ -4,6 +4,11 @@ import { SecurityDashboard } from '@/components/SecurityDashboard';
 import { PasswordVault } from '@/components/PasswordVault';
 import { PasswordGenerator } from '@/components/PasswordGenerator';
 import { TOTPGenerator } from '@/components/TOTPGenerator';
+import { SecurityAnalysis } from '@/components/SecurityAnalysis';
+import { BreachCheck } from '@/components/BreachCheck';
+import { SecurityCoach } from '@/components/SecurityCoach';
+import { Achievements } from '@/components/Achievements';
+import { ActivityStats } from '@/components/ActivityStats';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -16,8 +21,16 @@ const Index = () => {
         return <PasswordVault />;
       case 'generator':
         return <PasswordGenerator />;
-      case 'totp':
-        return <TOTPGenerator />;
+      case 'analysis':
+        return <SecurityAnalysis />;
+      case 'breach':
+        return <BreachCheck />;
+      case 'coach':
+        return <SecurityCoach />;
+      case 'achievements':
+        return <Achievements />;
+      case 'stats':
+        return <ActivityStats />;
       default:
         return <SecurityDashboard />;
     }
